@@ -18,11 +18,12 @@ body{
 }
 h1{padding:10px 0 0 0 ;
     font-family: 'Rubik Bubbles', cursive;
+    margin-bottom: 20px;
 }
 #taskinput{
     width: 40vw;
-    margin-top:10px;
-    margin-bottom: 20px;
+    margin:0px 0 10px 10px;
+
     padding:1% 0 1% 1%;
     border:0;
     border-bottom: 2px solid black;
@@ -64,7 +65,7 @@ h1{padding:10px 0 0 0 ;
 .list{
     display: flex;
     justify-content: space-between;
-    margin :30px 15px0 0 15px;
+    margin :30px 15px 0 15px;
     font-size: 20px;
     font-weight: 300;
 

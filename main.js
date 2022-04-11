@@ -23,12 +23,13 @@ let input=document.getElementById("taskinput");
 taskinput.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
       addtask(event);
+        taskinput.value='';
     }
+
   });
 
-
 add.addEventListener("click",addtask);
-underline.foreach
+
 
 for(let i=1;i<tabs.length;i++){
     tabs[i].addEventListener("click",function(event){filter(event)})
@@ -66,7 +67,7 @@ function render(){
             <div>${list[i].taskcontent}</div> 
             <div>
             <button class="checkbtn" onClick="toggle('${list[i].id}')"><i class="fa-regular fa-square"></i></button>
-            <button class="deletebtn"  onclick="deletetask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
+            <button class="deletebtn" onclick="deletetask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
         </div>
     </div>`;
         }
@@ -92,7 +93,7 @@ function toggle(id){
 function deletetask(id){
     for(let i=0;i<tasklist.length;i++){
         if(tasklist[i].id ==id){
-            tasklist.splice(i,1)
+            tasklist.splice(i,1);
             break;
         }
     }
@@ -102,12 +103,15 @@ function deletetask(id){
 }
 
 function filter(event){
-    mode=event.target.id;
-
+    
+    
+        
+    if(event){
     //밑줄움직임
+    mode=event.target.id;
         underline.style.left = event.target.offsetLeft + "px";
         underline.style.width = event.target.offsetWidth + "px";
-        underline.style.top = event.target.offsetTop + (event.target.offsetHeight-4) + "px";
+        underline.style.top = event.target.offsetTop + (event.target.offsetHeight -4) + "px";
     }
    
     //여기서 event는 tabs를 클릭할때 발생, 그때 id값 all ongoing done 중에 가져온다
@@ -127,11 +131,11 @@ function filter(event){
     }else if(mode =="done"){
         for(let i=0;i<tasklist.length;i++){
             if(tasklist[i].iscomplete==true)
-            filterlist.push(tasklist[i])
+            filterlist.push(tasklist[i]);
         }
     }
     render();
-
+}
 
 function random(){
     return '_' + Math.random().toString(36).substr(2,9);
