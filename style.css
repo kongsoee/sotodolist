@@ -1,0 +1,91 @@
+@import url(common.css);
+
+body{
+    margin:0;
+    background-image:url("../image/back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container{
+    border-top:10px solid  rgb(69, 69, 69);
+    border-bottom:10px solid rgb(69, 69, 69);
+    background-color: white;
+    min-height: 100vh;
+    max-width: 800px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+h1{padding:10px 0 0 0 ;
+    font-family: 'Rubik Bubbles', cursive;
+}
+#taskinput{
+    width: 40vw;
+    margin-top:10px;
+    margin-bottom: 20px;
+    padding:1% 0 1% 1%;
+    border:0;
+    border-bottom: 2px solid black;
+    font-size:20px;
+}
+
+
+#add{
+
+    color: black;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+.tabs{
+    display: flex;
+    position: relative;
+    font-weight: 500;
+    font-size: 17px;
+}
+.tabs div{
+    padding:1em;
+    cursor:pointer;
+}
+
+
+#under{
+    background-color: rgb(118, 87, 255);
+    height: 4px !important;
+    position: absolute;
+    width:64px;
+    left:50x;
+    top:60px;
+    padding:0px;
+    transition: 0.5s;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    margin :30px 15px0 0 15px;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.checkbtn{
+    border:none;
+    background-color:white;
+    color:black;
+
+}
+
+.deletebtn{
+    border:none;
+    background-color:white;
+    color:black;
+    outline:none;
+
+}
+.taskdone{
+    text-decoration:line-through;
+}
+
+
