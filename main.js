@@ -86,7 +86,7 @@ function toggle(id){
         } 
     
     }
-    render();
+    filter();
     console.log(tasklist);
    
 
@@ -99,15 +99,13 @@ function deletetask(id){
             break;
         }
     }
-    render();
+    filter();
     console.log(tasklist);
 
 }
 
 function filter(event){
-    
-    
-        
+
     if(event){
     //밑줄움직임
     mode=event.target.id;
