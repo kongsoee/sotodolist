@@ -107,7 +107,7 @@ function filter(event){
     //밑줄움직임
         underline.style.left = event.target.offsetLeft + "px";
         underline.style.width = event.target.offsetWidth + "px";
-        underline.style.top = event.target.offsetTop + event.currentTarget.offsetHeight + "px";
+        underline.style.top = event.target.offsetTop + (event.target.offsetHeight-4) + "px";
     }
    
     //여기서 event는 tabs를 클릭할때 발생, 그때 id값 all ongoing done 중에 가져온다
