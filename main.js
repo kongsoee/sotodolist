@@ -19,14 +19,14 @@ let mode="all";
 let filterlist=[];
 let underline=document.getElementById("under");
 let input=document.getElementById("taskinput");
+
 add.addEventListener("click",addtask);
 
-taskinput.addEventListener("keyup", function (event) {
+taskinput.addEventListener("keypress",(event)=> {
     if (event.keyCode === 13) {
       addtask();
         taskinput.value='';
     }
-
   });
 
 
@@ -44,6 +44,7 @@ function addtask(){
     tasklist.push(task);
     console.log(tasklist);
     render();
+    taskinput.value='';
 }
 
 function render(){
