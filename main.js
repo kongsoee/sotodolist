@@ -19,16 +19,17 @@ let mode="all";
 let filterlist=[];
 let underline=document.getElementById("under");
 let input=document.getElementById("taskinput");
+add.addEventListener("click",addtask);
 
 taskinput.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
-      addtask(event);
+      addtask();
         taskinput.value='';
     }
 
   });
 
-add.addEventListener("click",addtask);
+
 
 
 for(let i=1;i<tabs.length;i++){
